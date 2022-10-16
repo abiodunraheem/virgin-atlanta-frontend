@@ -20,7 +20,7 @@ Check out the [API documentation]()
 
 ### Front-End Repo 
 
-- [x] [We Fly Digital](https://github.com/abiodunraheem/virgin-atlanta-frontend)
+- [x] [We Fly Digital](https://github.com/abiodunraheem/virgin-atlanta-backend)
 
 ## Built With 🛠️
 
@@ -63,7 +63,7 @@ To get a local copy up and running follow these simple example steps.
 
 - clone the repository by running:
 ```
-git clone git@github.com:abiodunraheem/virgin-atlanta-backend.git
+git clone git@github.com:abiodunraheem/virgin-atlanta-frontend.git
 ```
 - Install packages
   ``` bundle i ```
@@ -103,7 +103,7 @@ $ rspec spec
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/abiodunraheem/virgin-atlanta-backend/issues).
+Feel free to check the [issues page](https://github.com/abiodunraheem/virgin-atlanta-frontend/issues).
 
 ## Show your support
 
