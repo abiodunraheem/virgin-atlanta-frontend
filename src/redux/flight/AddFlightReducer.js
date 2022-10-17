@@ -17,8 +17,8 @@ const addFlight = (payload) => async(dispatch) => {
     })
 }
 
-const flight = initialState;
-const addFlightReducer = (state = flight, action) => {
+const flightState = [];
+const addFlightReducer = (state = flightState, action) => {
     switch (action.type) {
         case CREATE_FLIGHT:
             return [...state, action.payload];
@@ -26,3 +26,5 @@ const addFlightReducer = (state = flight, action) => {
             return state
     }
 }
+
+export default addFlightReducer;
