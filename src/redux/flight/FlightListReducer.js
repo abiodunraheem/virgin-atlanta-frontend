@@ -1,7 +1,7 @@
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-const fetchFlights = createAsyncThunk('fetchFlights', async () => {
+export const fetchFlights = createAsyncThunk('fetchFlights', async () => {
   const response = await axios.get('http://127.0.0.1:3000/api/v1/flights/');
   const flights = await response.data;
   return flights;
