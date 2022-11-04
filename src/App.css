@@ -230,7 +230,7 @@ sign up page--------------------------------------------------------------------
   height: 100vh;
   width: 100%;
   background-position: center;
-  background-image: url(./airplanes.jpg);
+  /* background-image: url(./airplanes.jpg); */
   background-size: cover;
   position: fixed;
   top: 0;
@@ -326,7 +326,7 @@ Details
 }
 
 /* ------------------------------------------------------------------------------------------------------------------------------
-Airline styles
+Flight styles
 
 -------------------------------------------------------------- */
 
@@ -344,7 +344,7 @@ Airline styles
   width: 100%;
 }
 
-.add-airline {
+.add-flight {
   position: absolute;
   display: flex;
   margin: 6% auto;
