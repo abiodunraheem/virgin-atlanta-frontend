@@ -13,12 +13,14 @@ import FlightDetails from './components/FlightDetails';
 function App() {
   return (
     <div className="app">
+      <NavigationPanel />
+      <Home />
       {(sessionStorage.getItem('loginToken')) ? <NavigationPanel /> : null }
       <Routes>
-        <Route path="/" element={<Login />} />
-        <Route path="/home" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/" element={<Home />} />
         <Route path="/flight/:id" element={<FlightDetails />} />
-        <Route path="/delete_flight" element={<DeleteFlight />} />
+        <Route path="/deleteFlight" element={<DeleteFlight />} />
         <Route path="/addFlight" element={<AddFlight />} />
         <Route path="/reservations" element={<Reservations />} />
         <Route path="/addReservation/:id" element={<AddReservation />} />

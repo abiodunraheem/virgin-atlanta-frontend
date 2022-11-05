@@ -38,16 +38,16 @@ const NavigationPanel = () => {
           <Link onClick={() => toggleActiveNav(!NavIsActive)} to="/home">Home</Link>
         </li>
         <li className={isActive ? 'active-link' : ''}>
-          <Link onClick={() => toggleActiveNav(!NavIsActive)} to="/add_flight">Add Flight</Link>
+          <Link onClick={() => toggleActiveNav(!NavIsActive)} to="/addFlight">Add Flight</Link>
         </li>
         <li className={isActive ? 'active-link' : ''}>
-          <Link onClick={() => toggleActiveNav(!NavIsActive)} to="/delete_flight">Delete Flight</Link>
+          <Link onClick={() => toggleActiveNav(!NavIsActive)} to="/deleteFlight">Delete Flight</Link>
         </li>
         <li className={isActive ? 'active-link' : ''}>
-          <Link onClick={() => toggleActiveNav(!NavIsActive)} to="/reservation">Reservation</Link>
+          <Link onClick={() => toggleActiveNav(!NavIsActive)} to="/reservations">Reservations</Link>
         </li>
         <li className={isActive ? 'active-link' : ''}>
-          <Link onClick={handleSignOut} to="/">Sign Out</Link>
+          <Link onClick={handleSignOut} to="/login">Sign Out</Link>
         </li>
       </ul>
       <ul className="social-links">

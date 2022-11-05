@@ -1,10 +1,10 @@
 import React, { useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { fetchFlights } from '../redux/flight/FlightListReducer';
-import Flight from './Flight';
+// import Flight from './Flight';
 
 const Home = () => {
-  const flightList = useSelector((state) => state.flights.flights.data);
+  // const flightList = useSelector((state) => state.flights.flights.data);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchFlights());
@@ -16,7 +16,7 @@ const Home = () => {
         <h2>Flight list:</h2>
         <p>Select to book a flight</p>
       </div>
-      <div className="container">
+      {/* <div className="container">
         <div className="flight">
           {(flightList) ? flightList.map((item) => (
             <Flight
@@ -28,7 +28,7 @@ const Home = () => {
             />
           )) : null }
         </div>
-      </div>
+      </div> */}
     </section>
   );
 };
