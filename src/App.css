@@ -139,6 +139,10 @@ span i:hover {
   text-align: center;
 }
 
+.header h1 {
+  font-weight: 800;
+}
+
 .header h2 {
   font-weight: 600;
 }
