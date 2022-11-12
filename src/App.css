@@ -162,32 +162,6 @@ span i:hover {
   gap: 15px;
 }
 
-@keyframes change {
-  0% {
-    background-image: url(assets/images/flight1.jpg);
-  }
-
-  20% {
-    background-image: url(assets/images/flight2.jpg);
-  }
-
-  40% {
-    background-image: url(assets/images/flight3.jpg);
-  }
-
-  60% {
-    background-image: url(assets/images/flight1.jpg);
-  }
-
-  80% {
-    background-image: url(assets/images/flight2.jpg);
-  }
-
-  100% {
-    background-image: url(assets/images/flight3.jpg);
-  }
-}
-
 .flights {
   display: grid;
   grid-template-columns: auto auto auto;
@@ -264,6 +238,32 @@ sign up page--------------------------------------------------------------------
   background-size: cover;
   position: fixed;
   top: 0;
+}
+
+@keyframes form-section {
+  0% {
+    background-image: url(assets/images/flight1.jpg);
+  }
+
+  20% {
+    background-image: url(assets/images/flight2.jpg);
+  }
+
+  40% {
+    background-image: url(assets/images/flight3.jpg);
+  }
+
+  60% {
+    background-image: url(assets/images/flight1.jpg);
+  }
+
+  80% {
+    background-image: url(assets/images/flight2.jpg);
+  }
+
+  100% {
+    background-image: url(assets/images/flight3.jpg);
+  }
 }
 
 .overlay {
