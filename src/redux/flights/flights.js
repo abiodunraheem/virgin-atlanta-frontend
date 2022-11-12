@@ -16,7 +16,7 @@ export const fetchAirlines = createAsyncThunk('airline/fetchAirlines', async () 
   return resJson;
 });
 
-export const addNewAirlines = createAsyncThunk('airline/fetchNewAirlines', async (newAirline) => {
+export const addNewFlights = createAsyncThunk('airline/fetchNewAirlines', async (newAirline) => {
   const res = fetch(`${baseURL}/airlines`, {
     method: 'POST',
     headers: {
@@ -53,12 +53,12 @@ const airlineSlice = createSlice({
       stateRejected.error = action.error.message;
     });
 
-    builder.addCase(addNewAirlines.fulfilled, (state, action) => {
+    builder.addCase(addNewFlights.fulfilled, (state, action) => {
       const stateFulfilled = state;
       stateFulfilled.airlines = action.payload;
     });
 
-    builder.addCase(addNewAirlines.rejected, (state, action) => {
+    builder.addCase(addNewFlights.rejected, (state, action) => {
       const stateRejected = state;
       stateRejected.error = action.payload.error;
     });
