@@ -162,6 +162,32 @@ span i:hover {
   gap: 15px;
 }
 
+@keyframes change {
+  0% {
+    background-image: url(assets/images/flight1.jpg);
+  }
+
+  20% {
+    background-image: url(assets/images/flight2.jpg);
+  }
+
+  40% {
+    background-image: url(assets/images/flight3.jpg);
+  }
+
+  60% {
+    background-image: url(assets/images/flight1.jpg);
+  }
+
+  80% {
+    background-image: url(assets/images/flight2.jpg);
+  }
+
+  100% {
+    background-image: url(assets/images/flight3.jpg);
+  }
+}
+
 .flights {
   display: grid;
   grid-template-columns: auto auto auto;
@@ -234,7 +260,7 @@ sign up page--------------------------------------------------------------------
   height: 100vh;
   width: 100%;
   background-position: center;
-  /* background-image: url(./airplanes.jpg); */
+  background-image: url(./assets/images/flight1.jpg);
   background-size: cover;
   position: fixed;
   top: 0;
@@ -244,7 +270,7 @@ sign up page--------------------------------------------------------------------
   width: 100%;
   position: fixed;
   height: 100vh;
-  background-color: rgba(151, 191, 25, 0.7);
+  /* background-color: rgba(151, 191, 25, 0.7); */
 }
 
 .form-signin {
@@ -263,7 +289,7 @@ sign up page--------------------------------------------------------------------
 }
 
 .sign-up {
-  background-color: #97bf19;
+  background-color: #4279a0;
   border-radius: 20px;
   color: white;
   border: solid;
