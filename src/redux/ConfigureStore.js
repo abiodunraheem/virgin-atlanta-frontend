@@ -14,14 +14,14 @@
 import { configureStore } from '@reduxjs/toolkit';
 import { createLogger } from 'redux-logger';
 import registerReducer from './users/registerSlice';
-import airlineReducer from './flights/flights';
+import flightReducer from './flights/flights';
 import reservationReducer from './reservations/reservations';
 
 const logger = createLogger();
 
 const store = configureStore({
   reducer: {
-    airlines: airlineReducer,
+    flights: flightReducer,
     userInfo: registerReducer,
     reservations: reservationReducer,
   },

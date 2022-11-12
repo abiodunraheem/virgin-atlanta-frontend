@@ -1,12 +1,12 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'; import baseURL from '../api';
 
 const initialState = {
-  airlines: [],
+  flights: [],
   error: '',
 };
 
-export const fetchAirlines = createAsyncThunk('airline/fetchAirlines', async () => {
-  const res = await fetch(`${baseURL}/airlines`, {
+export const fetchFlights = createAsyncThunk('flight/fetchFlights', async () => {
+  const res = await fetch(`${baseURL}/flights`, {
     headers: {
       'Content-type': 'application/json',
       Authorization: `Bearer ${sessionStorage.getItem('loginToken')}`,
@@ -16,20 +16,20 @@ export const fetchAirlines = createAsyncThunk('airline/fetchAirlines', async () 
   return resJson;
 });
 
-export const addNewFlights = createAsyncThunk('airline/fetchNewAirlines', async (newAirline) => {
-  const res = fetch(`${baseURL}/airlines`, {
+export const addNewFlights = createAsyncThunk('flight/fetchNewFlights', async (newFlight) => {
+  const res = fetch(`${baseURL}/flights`, {
     method: 'POST',
     headers: {
       'Content-type': 'application/json',
       Authorization: `Bearer ${sessionStorage.getItem('loginToken')}`,
     },
-    body: JSON.stringify(newAirline),
+    body: JSON.stringify(newFlight),
   }).then((res) => res.json());
   return res;
 });
 
-export const deleteAirline = createAsyncThunk('airline/deleteAirline', async (id) => {
-  const res = await fetch(`${baseURL}/airlines/${id}`, {
+export const deleteFlight = createAsyncThunk('flight/deleteFlight', async (id) => {
+  const res = await fetch(`${baseURL}/flights/${id}`, {
     method: 'DELETE',
     headers: {
       'Content-type': 'application/json',
@@ -39,23 +39,23 @@ export const deleteAirline = createAsyncThunk('airline/deleteAirline', async (id
   return res.json();
 });
 
-const airlineSlice = createSlice({
-  name: 'airline',
+const flightSlice = createSlice({
+  name: 'flight',
   initialState,
   extraReducers: (builder) => {
-    builder.addCase(fetchAirlines.fulfilled, (state, action) => {
+    builder.addCase(fetchFlights.fulfilled, (state, action) => {
       const stateFulfilled = state;
-      stateFulfilled.airlines = action.payload;
+      stateFulfilled.flights = action.payload;
     });
 
-    builder.addCase(fetchAirlines.rejected, (state, action) => {
+    builder.addCase(fetchFlights.rejected, (state, action) => {
       const stateRejected = state;
       stateRejected.error = action.error.message;
     });
 
     builder.addCase(addNewFlights.fulfilled, (state, action) => {
       const stateFulfilled = state;
-      stateFulfilled.airlines = action.payload;
+      stateFulfilled.flights = action.payload;
     });
 
     builder.addCase(addNewFlights.rejected, (state, action) => {
@@ -63,17 +63,17 @@ const airlineSlice = createSlice({
       stateRejected.error = action.payload.error;
     });
 
-    builder.addCase(deleteAirline.fulfilled, (state, action) => {
+    builder.addCase(deleteFlight.fulfilled, (state, action) => {
       const stateFulfilled = state;
-      stateFulfilled.airlines = action.payload;
+      stateFulfilled.flights = action.payload;
     });
 
-    builder.addCase(deleteAirline.rejected, (state, action) => {
+    builder.addCase(deleteFlight.rejected, (state, action) => {
       const stateRejected = state;
       stateRejected.error = action.payload.error;
     });
   },
 });
 
-const airlineReducer = airlineSlice.reducer;
-export default airlineReducer;
+const flightReducer = flightSlice.reducer;
+export default flightReducer;
