@@ -21,7 +21,7 @@ function AddFlight() {
 
     dispach(addNewFlights(newFlight));
 
-    if (!flight.name || !flight.image || !flight.price) {
+    if (!flight.name || !flight.avatar || !flight.price) {
       alert('Fill up the form!');
       return;
     }
@@ -37,7 +37,7 @@ function AddFlight() {
   };
 
   return (
-    <section className="add-airline container">
+    <section className="add-flight container">
       <h2>Add New Flight</h2>
       <form onSubmit={handleNewFlight} className="form">
         <div className="mb-3">
@@ -60,7 +60,7 @@ function AddFlight() {
               type="url"
               className="form-control"
               id="image"
-              value={flight.image}
+              value={flight.avatar}
               onChange={(e) => setFlight({ ...flight, avatar: e.target.value })}
               placeholder="Image URL"
             />

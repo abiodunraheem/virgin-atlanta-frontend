@@ -1,25 +1,25 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { fetchAirlines, deleteAirline } from '../redux/flights/flights';
+import { fetchFlights, deleteFlight } from '../redux/flights/flights';
 
 const DeleteFlights = () => {
-  const dataList = useSelector((state) => state.airlines.airlines.data);
+  const dataList = useSelector((state) => state.flights.flights.data);
   const dispatch = useDispatch();
 
   useEffect(() => {
-    if (!dataList) dispatch(fetchAirlines());
+    if (!dataList) dispatch(fetchFlights());
   });
 
   const handleClick = (id) => {
-    dispatch(deleteAirline(id));
+    dispatch(deleteFlight(id));
   };
 
   return (
-    <section className="add-airline container ">
+    <section className="add-flight container ">
       <div className="header">
-        <h2>Flights list:</h2>
-        <p>Want to cancel? please pick a flight from the following list</p>
+        <h2>Do you want to cancel your flight?</h2>
+        <p>Please pick a flight from the following list:</p>
       </div>
       <div className="">
         <div className="flights">
