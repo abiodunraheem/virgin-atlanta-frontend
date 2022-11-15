@@ -14,7 +14,6 @@ function App() {
   return (
     <div className="app">
       {(sessionStorage.getItem('loginToken')) ? <NavigationPanel /> : null }
-      <NavigationPanel />
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/home" element={<Home />} />
@@ -22,7 +21,7 @@ function App() {
         <Route path="/DeleteFlight" element={<DeleteFlight />} />
         <Route path="/AddFlight" element={<AddFlight />} />
         <Route path="/reservations" element={<Reservations />} />
-        <Route path="/addReservation/:id" element={<AddReservation />} />
+        <Route path="/addReservation" element={<AddReservation />} />
         <Route path="/signUp" element={<SignUp />} />
       </Routes>
     </div>

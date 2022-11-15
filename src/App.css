@@ -137,6 +137,7 @@ span i:hover {
 .header {
   font-family: 'Courier New', Courier, monospace;
   text-align: center;
+  margin-top: 12px;
 }
 
 .header h1 {
@@ -383,6 +384,13 @@ Flight styles
   right: 10%;
   max-width: 69%;
 }
+
+/* .table {
+  width: 70%;
+  justify-content: center;
+  align-items: center;
+  margin: 0 20px 0 40px;
+} */
 
 .details-reservation-container {
   display: grid;

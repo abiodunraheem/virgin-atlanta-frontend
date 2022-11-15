@@ -36,10 +36,10 @@ function AddReservation() {
   };
 
   return (
-    <section className="form-section bg-lime-500 ">
+    <section className="form-reserve bg-lime-500 ">
       <div className="overlay">
         <div className="form-signin">
-          <div className="form-intro text-white text-center  p-1 my-2 ">
+          <div className="form-intro text-center  p-1 my-2 ">
             <h2>Book Your Flight</h2>
             <hr className="px-2" />
           </div>

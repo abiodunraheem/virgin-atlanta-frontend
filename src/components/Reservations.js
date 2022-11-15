@@ -17,7 +17,7 @@ function Reservations() {
           All Reservatoins
         </h1>
         <p className="text-center text-gray-500 font-semibold text-1xl">
-          Travel around the world with us
+          Your safety and confort, is our priority!!!
         </p>
       </div>
       <div className="details-reservation-container table-responsive">

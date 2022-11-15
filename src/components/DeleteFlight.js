@@ -19,7 +19,7 @@ const DeleteFlights = () => {
     <section className="add-flight container ">
       <div className="header">
         <h2>Do you want to cancel your flight?</h2>
-        <p>Please pick a flight from the following list:</p>
+        <p>Please select your flight from the following list:</p>
       </div>
       <div className="">
         <div className="flights">

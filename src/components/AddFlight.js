@@ -41,12 +41,12 @@ function AddFlight() {
       <h2>Add New Flight</h2>
       <form onSubmit={handleNewFlight} className="form">
         <div className="mb-3">
-          <label htmlFor="airline-name" className="form-label">
+          <label htmlFor="flight-name" className="form-label">
             Flight Name
             <input
               type="text"
               className="form-control"
-              id="airline-name"
+              id="flight-name"
               value={flight.name}
               onChange={(e) => setFlight({ ...flight, name: e.target.value })}
               placeholder="Name"

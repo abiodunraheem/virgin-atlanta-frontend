@@ -70,6 +70,16 @@ function NavigationPanel() {
 
           <li className={isActive ? 'active-link' : ''}>
             {' '}
+            <Link
+              onClick={() => toggleActiveNav(!NavIsActive)}
+              to="/addReservation"
+            >
+              Add Reservation
+            </Link>
+          </li>
+
+          <li className={isActive ? 'active-link' : ''}>
+            {' '}
             <Link onClick={handleSignOut} to="/">
               SignOut
             </Link>
