@@ -1,3 +1,3 @@
-const baseURL = 'https://flight-digital.herokuapp.com/';
+const baseURL = 'http://localhost:3000/api/v1/';
 
 export default baseURL;
